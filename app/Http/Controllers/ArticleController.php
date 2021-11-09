@@ -1,12 +1,20 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use PDF;
 use App\Models\Article;
 use Illuminate\Http\Request;
 
 class ArticleController extends Controller
 {
+
+    public function cetak_pdf(){
+        $articles = Article::all();
+        $pdf = PDF::loadview('articles.articles_pdf', ['articles'=>$articles]);
+        return $pdf->stream();
+    }
+
+
     /**
      * Display a listing of the resource.
      *
