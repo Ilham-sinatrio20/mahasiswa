@@ -4,11 +4,21 @@ namespace App\Http\Controllers;
 
 use App\Models\Mahasiswa;
 use App\Models\Kelas;
+use App\Models\Mahasiswa_Matakuliah;
 use Illuminate\Http\Request;
 
 
 class MahasiswaController extends Controller
 {
+     /**
+     * Display a listing of the resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function mhsMatkul(){
+        $mahasiswaMatakuliah = Mahasiswa_Matakuliah::all();
+        return view('mahasiswas.nilai', compact('mahasiswaMatakuliah'));
+    }
     /**
      * Display a listing of the resource.
      *
