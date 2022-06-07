@@ -43,6 +43,5 @@
                 </tr>
             @endforeach
         </table>
-        <center><a href="/cetakKHS/{{ $mhsMatkul->id }}" class="btn btn-success mt-4">Cetak PDF</a></center>
     </div>
 @endsection

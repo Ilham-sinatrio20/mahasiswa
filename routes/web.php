@@ -12,6 +12,8 @@ Route::get('/', function () {
 });
 
 Route::resource('mahasiswas', MahasiswaController::class);
-
+Route::get('mahasiswas/nilai/{id}', [MahasiswaController::class, 'mhsMatkul']);
+// Route::resource('nilai', Mahasiswa_Matakuliah::class)->only(['show']);
 Route::get('/article/cetak_pdf', [ArticleController::class, 'cetak_pdf']);
 
+Route::get('/cetakKHS/{id}', [MahasiswaController::class, 'cetakPDF']);

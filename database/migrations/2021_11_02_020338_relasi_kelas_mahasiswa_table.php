@@ -13,9 +13,9 @@ class RelasiKelasMahasiswaTable extends Migration
     public function up()
     {
         Schema::table('mahasiswa', function(Blueprint $table){
-            $table->dropColumn('kelas'); // Delete kolom kelas
-            $table->unsignedBigInteger('kelas_id')->nullable(); // Tambah kolom kelas_id
-            $table->foreign('kelas_id')->references('id')->on('kelas'); // Tambah foreign key di kolom kelas_id
+            // $table->dropColumn('kelas'); // Delete kolom kelas
+            // $table->unsignedBigInteger('kelas_id')->nullable(); // Tambah kolom kelas_id
+            // $table->foreign('kelas_id')->references('id')->on('kelas'); // Tambah foreign key di kolom kelas_id
         });
     }
     /**

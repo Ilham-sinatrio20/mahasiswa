@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 use PDF;
 use App\Models\Article;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\File;
 
 class ArticleController extends Controller
 {

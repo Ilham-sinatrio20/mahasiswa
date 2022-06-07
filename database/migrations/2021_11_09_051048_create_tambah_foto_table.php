@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class TambahKolomMahasiswa extends Migration
+class CreateTambahFotoTable extends Migration
 {
     /**
      * Run the migrations.
@@ -14,8 +14,7 @@ class TambahKolomMahasiswa extends Migration
     public function up()
     {
         Schema::table('mahasiswa', function (Blueprint $table) {
-            //$table->date('tgl_lahir')->after('nama')->nullable();
-           // $table->string('email', 75)->after('nim')->nullable();
+            //$table->string('images', 50)->after('nama');
         });
     }
 
@@ -26,8 +25,6 @@ class TambahKolomMahasiswa extends Migration
      */
     public function down()
     {
-        Schema::table('mahasiswa', function (Blueprint $table) {
-            //
-        });
+        Schema::dropIfExists('tambah_foto');
     }
 }
